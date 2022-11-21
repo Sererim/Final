@@ -1,13 +1,26 @@
 ﻿
 int Main()
 {
-    string[] input = new string[4] {"hello", "2", "world", ":-)"};
-    int num = 3;
-    string control = "50";
-    num = Utils.StringToInt(control);
-    Console.WriteLine(num);
+    const int size = 4;
+    string[] input = new string[size] {"hello", "2", "world", ":-)"};
+    int num = 0;
+    string control = "NULL";
 
-    Utils.ShowArray(4, input);
+    while(true)
+    {
+
+
+
+
+
+
+
+        Console.WriteLine("Do you want to terminate a program ? \nY/y");
+        control = Console.ReadLine();
+        
+        if(control == "Y" || control == "y") break;
+        else Main();
+    }
 
     return 0;
 }

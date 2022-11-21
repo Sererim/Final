@@ -1,14 +1,26 @@
 ﻿
 int Main()
 {
-    const int size = 4;
-    string[] input = new string[size] {"hello", "2", "world", ":-)"};
+    Console.WriteLine("Program is running.");
     int num = 0, foo = 0, bar = 0;
     string control = "NULL";
 
+    Console.WriteLine("Enter a number for an array size.");
+    string[] input = new string[] {};
+    int size = 4;
+    control = Console.ReadLine();
+    size = Utils.StringToInt(control);
+
+    Array.Resize(ref input, input.Length + size);
+    
+    for(int n = 0; n < size; n++)
+    {
+        Console.WriteLine($"Enter a string for an array at position: {n}");
+        input[n] = Console.ReadLine();
+    }
+
     while(true)
     {
-        Console.WriteLine("Program is running.");
         Utils.ShowArray(size, input);
         
         Console.WriteLine("Enter size of a new array.\nThe size must be less or equal 3.");
